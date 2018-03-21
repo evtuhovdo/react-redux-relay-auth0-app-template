@@ -1,0 +1,53 @@
+{
+  "name": "react-redux-relay-auth0-app-template",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Denis Evtuhov <evtuhovdo@gmail.com>",
+  "license": "UNLICENSED",
+  "main": "./src/index.js",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "dependencies": {
+    "auth0-js": "^9.3.3",
+    "auth0-lock": "^11.3.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "history": "^4.7.2",
+    "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.5",
+    "node-env-file": "^0.1.8",
+    "prop-types": "^15.6.1",
+    "react": "~16.2.0",
+    "react-dom": "~16.2.0",
+    "react-relay": "~1.5.0",
+    "react-router-redux": "^4.0.8",
+    "redux-localstorage": "~0.4.1",
+    "redux-persist": "^5.9.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-relay": "^1.5.0",
+    "eslint": "~4.18.2",
+    "eslint-config-airbnb": "~16.1.0",
+    "eslint-plugin-import": "~2.9.0",
+    "eslint-plugin-jsx-a11y": "~6.0.3",
+    "eslint-plugin-react": "~7.7.0",
+    "graphql": "^0.13.1",
+    "react-redux": "~5.0.7",
+    "react-router": "~4.2.0",
+    "react-router-dom": "~4.2.2",
+    "react-scripts": "1.1.1",
+    "redux": "~3.7.2",
+    "redux-thunk": "~2.2.0",
+    "relay-compiler": "^1.5.0",
+    "relay-devtools": "^1.4.0",
+    "relay-runtime": "^1.5.0"
+  },
+  "scripts": {
+    "update-schema": "babel-node ./scripts/updateSchema.js",
+    "relay": "relay-compiler --src ./src --schema src/module/relay/schema.json --extensions js jsx",
+    "realy-watch": "yarn relay -- --watch ",
+    "build": "node ./setup && react-scripts build",
+    "start": "node ./setup && react-scripts start"
+  }
+}
